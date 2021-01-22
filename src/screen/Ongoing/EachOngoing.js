@@ -1,0 +1,38 @@
+import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+import styles from './styles.jsx';
+import { StyleSheet, Text, View, Button } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+export default function HomeScreen({eachItem}) {
+    // console.log(eachItem)
+  return (
+    // <View style={styles.container}>
+      <View style={styles.Election}>
+      <Text style={styles.ongoing}>
+        {eachItem.name} ELECTION
+      </Text>
+      <Text style={styles.click}>
+       Start time 12th Mondey, 2020 by {eachItem.stime} 
+      </Text>
+      <Text style={styles.click}>
+       Endtime 12th Mondey, 2020 by {eachItem.ftime} 
+      </Text>
+      <Text style={styles.view}>
+        START VOTING 
+      </Text>
+      </View>
+     
+    // </View>
+  );
+}
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#fff',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//   },
+// });
