@@ -24,8 +24,7 @@ function TabBarIcon(props) {
 return   ( <View >
 
 <TabBarIcon  name="people-circle-sharp"
-onPress={()=>{navigation.push("Home",
-{screen:"ProfileScreen"})}} 
+start
  size={43} color='#6C63FF' />
  </View>)
 }

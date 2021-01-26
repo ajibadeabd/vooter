@@ -9,6 +9,7 @@ import ProfileScreen from '../screen/Profile';
 import OngoingScreen from '../screen/Ongoing/index';
 import AllScreen from '../screen/ElectionResult/index';
 import EachResult from '../screen/ElectionResult/EachResult';
+import StartVote from '../screen/Ongoing/StartVote/index';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Ionicons,MaterialCommunityIcons,Feather,AntDesign } from '@expo/vector-icons';
 const Tab = createBottomTabNavigator();
@@ -53,12 +54,7 @@ function TabBarIcon(props) {
           options={({route})=>({ 
             
             headerTitle: ({})=>{
-                // console.log(route.params)
-
-                // return <Text
-                // style={{marginLeft:-11}}>
-                    
-                //     aa</Text>
+                
                     },
                      headerRight:()=>{
                         return  <Text 
@@ -67,6 +63,26 @@ function TabBarIcon(props) {
                             fontWeight:'bold',
                             marginRight:25
                         }}>{route.params.action}</Text>
+                  },
+           }
+           )}
+        />
+          <HomesScreenStack.Screen
+          name="StartVote"
+          component={StartVote}
+        //   options={({ route }) => ({ title: route.params.name })}
+          options={({route})=>({ 
+            
+            headerTitle: ({})=>{
+                
+                    },
+                     headerRight:()=>{
+                        return  <Text 
+                        style={{
+                            fontSize:20,
+                            fontWeight:'bold',
+                            marginRight:25
+                        }}>{'route.params.action'}</Text>
                   },
            }
            )}

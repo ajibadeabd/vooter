@@ -43,7 +43,6 @@ export default function HomeScreen({ navigation,route }) {
             >view Result</Text>
 
             </View>
-            // <EachResult eachElection={item}/>
         }
             keyExtractor={(item)=>item.id}
              />

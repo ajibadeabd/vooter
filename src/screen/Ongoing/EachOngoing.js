@@ -5,7 +5,12 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-export default function HomeScreen({eachItem}) {
+export default function HomeScreen({eachItem,navigation}) {
+  const onpress=()=>{
+    console.log('object')
+    navigation.navigate('StartVote')
+    
+  }
     // console.log(eachItem)
   return (
     // <View style={styles.container}>
@@ -19,7 +24,9 @@ export default function HomeScreen({eachItem}) {
       <Text style={styles.click}>
        Endtime 12th Mondey, 2020 by {eachItem.ftime} 
       </Text>
-      <Text style={styles.view}>
+      <Text 
+      onPress={onpress}
+      style={styles.view}>
         START VOTING 
       </Text>
       </View>

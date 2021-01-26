@@ -3,18 +3,18 @@ import React from 'react'
 import { Ionicons } from '@expo/vector-icons'; 
 
 import { Text,View,StyleSheet, Image} from 'react-native'
-export default function EachResult() {
+export default function EachResult({item}) {
     return (
                 <View style={styles.eachrole}>
 <Ionicons
  name="person-circle" 
  size={62} color="#6C63FF" />
                     <View>
-                <Text style={styles.name}>abdullah</Text>
-                <Text style={styles.dept}>electronic and computer </Text>
+                <Text style={styles.name}>{item.name}</Text>
+                <Text style={styles.dept}>{item.dept} </Text>
 
                     </View>
-                <Text style={styles.count}>50</Text>
+                <Text style={styles.count}>{item.count}</Text>
 
 
                 </View>
