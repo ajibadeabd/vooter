@@ -23,9 +23,9 @@ export default function App() {
   return(
     <NavigationContainer>
     {/* {auth==true? */}
-    <AuthUser/>
+    {/* <AuthUser/> */}
     {/* // : */}
-    {/* <NotAuthUser/> */}
+    <NotAuthUser/>
     {/* } */}
     </NavigationContainer>
   )
