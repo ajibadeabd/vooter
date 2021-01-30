@@ -8,29 +8,30 @@ const css=StyleSheet.create({
     },
     item:{
         fontSize:20,
-        height:200,
         borderRadius:10,
-        marginTop:50,
-        marginHorizontal:30,
-        padding:20,
+        marginTop:'12.1%',
+        marginHorizontal:'6.8%',
+        padding:'4.88%',
         backgroundColor:'#6C63FF',
     },
     text:{
         fontSize:30,
         textTransform:'uppercase',
-        color:'#fff'
+        color:'#fff',
+        textAlign:'center',
+
     },
     view:{
+
         color:'white',
-        fontSize:14,
+        borderColor:'white',
         borderWidth:1,
-        borderColor:'#fff',
+        borderRadius:6,
+        fontSize:20,
+        marginTop:'11%',
+        padding:'4%',
+        paddingHorizontal:'6%',
         textAlign:'center',
-        padding:10,
-        textTransform:'uppercase',
-        width:140,
-        borderRadius:10,
-        marginTop:50
     }
     
        

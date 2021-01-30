@@ -7,13 +7,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 export default function HomeScreen({eachItem,navigation}) {
   const onpress=()=>{
-    console.log('object')
-    navigation.navigate('StartVote')
-    
+    navigation.navigate('StartVote',{action:'Election'})
   }
-    // console.log(eachItem)
   return (
-    // <View style={styles.container}>
       <View style={styles.Election}>
       <Text style={styles.ongoing}>
         {eachItem.name} ELECTION
@@ -26,20 +22,10 @@ export default function HomeScreen({eachItem,navigation}) {
       </Text>
       <Text 
       onPress={onpress}
+     
       style={styles.view}>
         START VOTING 
       </Text>
       </View>
-     
-    // </View>
   );
 }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });

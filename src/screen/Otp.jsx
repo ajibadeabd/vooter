@@ -8,39 +8,41 @@ import { TextInput,Text, View, StyleSheet, Button,
     import { Ionicons } from '@expo/vector-icons';
 import { TouchableOpacity, TouchableWithoutFeedback } from "react-native-gesture-handler";
 
-// export default function Form(props) {
-//   console.log(props)
-//   console.log('props')
-  export default function Form({navigation, route}) {
-  console.log('props')
-  const change =()=>{
-  //   route.params.change
-  // route.params.mmm()
-
-  }
-
+export default function Form({navigation}) {
   return (
     
     <View 
     style={{ flex: 1,
     backgroungColor:'white' ,
+    justifyContent:'center',
     paddingTop:'14.4%',
     }}>
        <TouchableWithoutFeedback
     onPress={Keyboard.dismiss}
     >
     <View style={styles.landingImage}>
-    <Ionicons name="checkmark-circle-sharp"
-    size={150} color="lightgrey" />
-
+    
      <Text
      style={{fontSize:50,
-      marginBottom:'20%',
-      color:'lightgrey'}}
+        textAlign:'center',
+        color:'grey'}}
      >
-         Voteer
+Please input your OTP
      </Text>
     <TextInput
+          style={{
+            paddingVertical: "2.1%",
+            borderWidth:1
+            ,borderColor:'lightgrey',
+            borderRadius:3,
+            width:"73%",
+            textAlign:'center',
+            margin:"1.5%"
+          }}
+        placeholder="Enter student email address"
+      />
+       <TextInput
+       
          style={{
           paddingVertical: "2.1%",
           borderWidth:1
@@ -50,19 +52,7 @@ import { TouchableOpacity, TouchableWithoutFeedback } from "react-native-gesture
           textAlign:'center',
           margin:"1.5%"
         }}
-        placeholder="Enter student email address"
-      />
-         <TextInput
-        style={{
-          paddingVertical: "2.1%",
-          borderWidth:1
-          ,borderColor:'lightgrey',
-          borderRadius:3,
-          width:"73%",
-          textAlign:'center',
-          margin:"1.5%"
-        }}
-        placeholder="Enter student email address"
+        placeholder="Enter otp"
       />
     </View>
     <View
@@ -73,38 +63,34 @@ import { TouchableOpacity, TouchableWithoutFeedback } from "react-native-gesture
 
         <Text
      style={{
-         fontSize:17,color:'white',
-     backgroundColor:'#6C63FF',
-     width:"100%",
-    //  width:290,
-     borderRadius:5,
-     paddingVertical:"6.5%",
-     paddingHorizontal:"27%",
-     textAlign:'center',
-     marginTop:"5%",
-     alignItems:'center'
-        
-        }}
-    onPress={change}
-    
+      fontSize:17,color:'white',
+  backgroundColor:'#6C63FF',
+  width:"100%",
+ //  width:290,
+  borderRadius:5,
+  paddingVertical:"6.5%",
+  paddingHorizontal:"25%",
+  textAlign:'center',
+  marginTop:"5%",
+  alignItems:'center'
+     
+     }}
+    onPress={()=>{navigation.push('Login')}}
 
 
-        >LOGIN</Text>
+        >confirm Otp</Text>
         </TouchableOpacity>
-
       <Text
       style={{color:'grey',
     fontSize:15
     }}
-      >Don't have an account ?
+      >Otp expired ?
         <TouchableOpacity>
 
         <Text
           style={{color:'#6C63FF',
           fontSize:15
-          }}
-    onPress={()=>{navigation.push('Register')}}
-    >    register
+          }}>    Resend otp
       </Text>
       </TouchableOpacity>
 
@@ -119,7 +105,7 @@ import { TouchableOpacity, TouchableWithoutFeedback } from "react-native-gesture
 }
 
 const styles = StyleSheet.create({
- 
+  
   landingImage:{
     //   padding:320,
       alignItems:'center'

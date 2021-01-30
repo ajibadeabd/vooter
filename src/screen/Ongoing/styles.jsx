@@ -6,40 +6,29 @@ const css=StyleSheet.create({
         backgroundColor:'#fff',
         
     },
-    Result:{
-        backgroundColor:'#6C63FF',
-        color:'#fff',
-        margin:20,
-        padding:20,
-        marginHorizontal:40,
-        height:250,
-        marginTop:30,
-        borderRadius:10,
-        alignItems:'center',
-
-    },
-    ongoing:{
+   
+     ongoing:{
         color:'white',
-        fontSize:30,
-        marginBottom:20,
+        fontSize:22,
+        marginBottom:'4%',
         fontWeight:'bold'
     },
     click:{
         color:'white',
         fontSize:16,
-        // fontWeight:'bold',
-        width:210,
+        marginHorizontal:'5%',
         textAlign:'center',
     },
     view:{
+        textAlign:'center',
         color:'white',
         borderColor:'white',
         borderWidth:1,
         borderRadius:6,
-        fontSize:17,
-        marginTop:40,
-        padding:10,
-        // width:80,
+        fontSize:18,
+        marginTop:'11%',
+        padding:'4%',
+        paddingHorizontal:'6%',
         textAlign:'center',
 
 
@@ -47,13 +36,11 @@ const css=StyleSheet.create({
 
     },
     Election:{
-        marginHorizontal:40,
+        marginHorizontal:'10%',
         backgroundColor:'#6C63FF',
         color:'#fff',
-        margin:20,
-        padding:20,
-        height:250,
-        marginTop:60,
+        padding:'5%',
+        marginTop:'12%',
         borderRadius:10,
         alignItems:'center',
 

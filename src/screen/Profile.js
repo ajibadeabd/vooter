@@ -14,7 +14,8 @@ onPress={()=>{navigation.navigate("Profile")}}
       <Text style={styles.emailcon}>
           <Text style={styles.email}>Email:</Text>
            Ajibadeabd@gmail.com</Text>
-      <StatusBar style="auto" />
+      {/* <StatusBar style="auto" /> */}
+      <StatusBar style={{paddingTop:'10%'}} />
     </View>
   );
 }
@@ -24,12 +25,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
+    paddingTop:'10%'
     // justifyContent: 'center',
   },
   name:{
 fontSize:20,
 fontWeight:'bold',
-margin:20
+margin:'2.5%',
+// margin:10
 
   },
   emailcon:{

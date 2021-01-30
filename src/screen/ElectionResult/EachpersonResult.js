@@ -3,7 +3,8 @@ import React from 'react'
 import { Ionicons } from '@expo/vector-icons'; 
 
 import { Text,View,StyleSheet, Image} from 'react-native'
-export default function EachResult({item}) {
+import { TouchableOpacity } from 'react-native-gesture-handler';
+export default function EachResult({item,vote}) {
     return (
                 <View style={styles.eachrole}>
 <Ionicons
@@ -14,7 +15,12 @@ export default function EachResult({item}) {
                 <Text style={styles.dept}>{item.dept} </Text>
 
                     </View>
-                <Text style={styles.count}>{item.count}</Text>
+                    {vote?
+                    <TouchableOpacity activeOpacity={.5}>
+                    <Text style={styles.vote}>Vote</Text>
+                    </TouchableOpacity>
+                    :<Text style={styles.count}>{item.count}</Text>}
+
 
 
                 </View>
@@ -25,23 +31,25 @@ const styles = StyleSheet.create({
     result:{
 flex:1
     },
-    role:{
-        backgroundColor:'#6C63FF',
-        margin:10,
-        padding:10,
-        borderRadius:5,
-
+  
+    vote:{
+        color:'#6C63FF',
+        borderColor:'#6C63FF',
+        borderWidth:1,
+        padding:19,
+        fontSize:17,
+        paddingVertical:10,
+        borderRadius:10
 
     },
     eachrole:{
         backgroundColor:'#fff',
         width:'90%',
-        padding:7,
+        padding:'1.9%',
         marginHorizontal:'5%',
-        margin:7,
+        margin:'1.9%',
         borderRadius:5,
         flexDirection:'row',
-        height:80,
         alignItems:'center',
         justifyContent:'space-between'
      
@@ -60,6 +68,7 @@ flex:1
     title:{
         color:'#fff',
         fontSize:30,
+        paddingVertical:10,
         paddingVertical:10,
         fontWeight:'bold',
         textAlign:'center',

@@ -1,6 +1,6 @@
 import React from 'react'
 // import styles from './styles'
-import EachpersonResult from './EachpersonResult'
+import EachpersonResult from '../../ElectionResult/EachpersonResult.js'
 import { Text,View,StyleSheet, ScrollView,Image,FlatList} from 'react-native'
 const  EachResult=({post}) =>{
    
@@ -10,7 +10,7 @@ const  EachResult=({post}) =>{
         <Text style={styles.title}>{post.post}</Text>
         <FlatList
             data={post.result}
-            renderItem={({item})=> <EachpersonResult item={item}/>}
+            renderItem={({item})=> <EachpersonResult vote={'vote'} item={item}/>}
             keyExtractor={(item)=>item.id} />
         </View>
         </View>
@@ -26,14 +26,13 @@ flex:1,
     padding:'2.4%',
     margin:'2.4%',
 
-
 },
 title:{
-    color:'#fff',
-    fontSize:30,
-    paddingVertical:'2.65%',
-    fontWeight:'bold',
-    textAlign:'center',
+  color:'#fff',
+  fontSize:30,
+  paddingVertical:'2.65%',
+  fontWeight:'bold',
+  textAlign:'center',
 }
    
 })

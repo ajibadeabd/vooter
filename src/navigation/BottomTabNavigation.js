@@ -82,7 +82,7 @@ function TabBarIcon(props) {
                             fontSize:20,
                             fontWeight:'bold',
                             marginRight:25
-                        }}>{'route.params.action'}</Text>
+                        }}>{route.params.action}</Text>
                   },
            }
            )}

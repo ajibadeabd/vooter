@@ -1,65 +1,56 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
-const css=StyleSheet.create({
-    container:{
-        flex:1,
-        backgroundColor:'#fff',
-        
-    },
-    Result:{
-        backgroundColor:'#6C63FF',
-        color:'#fff',
-        margin:20,
-        padding:20,
-        paddingHorizontal:20,
-        marginHorizontal:40,
-        height:250,
-        marginTop:30,
-        borderRadius:10,
-        alignItems:'center',
+const css = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+  },
+  Result: {
+    marginHorizontal: "10%",
+    backgroundColor: "#6C63FF",
+    color: "#fff",
+    paddingVertical: "5%",
+    marginTop: "10%",
+    borderRadius: 10,
+    alignItems: "center",
+  },
+  ongoing: {
+    color: "white",
+    fontSize: 25,
+    marginBottom: "4%",
+    marginHorizontal: "4%",
+    fontWeight: "bold",
+    textAlign:'center'
+  },
+  click: {
+    color: "white",
+    fontSize: 20,
+    // fontWeight:'bold',
+    // width:250,
+    marginHorizontal: "5%",
+    textAlign: "center",
+  },
+  view: {
+    color: "white",
+    borderColor: "white",
+    borderWidth: 1,
+    borderRadius: 6,
+    fontSize: 20,
+    marginTop: "11%",
+    padding: "4%",
+    paddingHorizontal: "6%",
+    textAlign: "center",
+  },
+  Election: {
+    marginHorizontal: "10%",
+    backgroundColor: "#6C63FF",
+    color: "#fff",
+    paddingVertical: "9%",
+    // height:"35%",
+    marginTop: "18%",
+    borderRadius: 10,
+    alignItems: "center",
+  },
+});
 
-    },
-    ongoing:{
-        color:'white',
-        fontSize:25,
-        marginBottom:20,
-        fontWeight:'bold'
-    },
-    click:{
-        color:'white',
-        fontSize:18,
-        // fontWeight:'bold',
-        width:250,
-        textAlign:'center',
-    },
-    view:{
-        color:'white',
-        borderColor:'white',
-        borderWidth:1,
-        borderRadius:6,
-        fontSize:20,
-        marginTop:40,
-        padding:10,
-        width:80,
-        textAlign:'center',
-
-
-
-
-    },
-    Election:{
-        marginHorizontal:40,
-        backgroundColor:'#6C63FF',
-        color:'#fff',
-        margin:20,
-        padding:20,
-        height:250,
-        marginTop:60,
-        borderRadius:10,
-        alignItems:'center',
-
-    }
-       
-})
-
-export default css
+export default css;
