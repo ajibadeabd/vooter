@@ -37,4 +37,4 @@ const css=StyleSheet.create({
        
 })
 
-export default css
+export default css;
